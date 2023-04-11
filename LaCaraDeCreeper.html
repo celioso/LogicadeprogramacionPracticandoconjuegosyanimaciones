@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <canvas width = "600" height = "400"></canvas>
+    
+    <!--Se usa para Java script-->
+    <script>
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.fillStyle = "green"; 
+        pincel.fillRect(0,0,350,300);//Cuerpo
+
+        pincel.fillStyle = "black";
+        pincel.fillRect(140,140,70,100);  //Tronco
+        pincel.fillRect(100,190,40,110); //Pierna Izquierda
+        pincel.fillRect(210,190,40,110); //Pierna derecha
+        pincel.fillRect(210,50,90,90); //Ojo Derecho
+        pincel.fillRect(50,50,90,90); //Ojo izquierdo
+    </script>
+</body>
+</html>
