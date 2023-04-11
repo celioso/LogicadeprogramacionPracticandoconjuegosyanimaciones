@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Canvas</title>
+</head>
+<body>
+
+    <canvas width = "600" height = "400"></canvas>
+    
+    <!--Se usa para Java script-->
+    <script>
+
+        function dibujarCuadro(x,y, color){
+            var pantalla = document.querySelector("canvas");
+            var pincel = pantalla.getContext("2d");
+
+            pincel.fillStyle = color; //propiedad
+            pincel.fillRect(x,y,50,50);
+            pincel.strokeStyle = "black";
+            pincel.strokeRect(x,y,50,50);
+        }
+
+        /*let x =0;
+        while (x < 600){
+            dibujarCuadro(x,0, "red");
+            dibujarCuadro(x,50, "yellow");
+            dibujarCuadro(x,100, "green");
+            x +=50;
+        }*/
+        
+        for(let x = 0; x < 600; x+=50){
+            dibujarCuadro(x,0, "red");
+            dibujarCuadro(x,50, "yellow");
+            dibujarCuadro(x,100, "green"); 
+        }
+
+    </script>
+</body>
+</html>
